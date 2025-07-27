@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidney Disease Prediction</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <script src="static/js/scripts.js" defer></script>
+</head>
+<body>
+    <button class="sidebar-toggle">☰ Menu</button>
+    <div class="sidebar">
+        <h2>Multiple Disease Prediction</h2>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/heart">Heart Disease Prediction</a></li>
+            <li><a href="/liver">Liver Disease Prediction</a></li>
+            <li><a href="/kidney">Kidney Disease Prediction</a></li>
+            <!-- <li><a href="/stroke">Stroke Prediction</a></li> -->
+            <li><a href="/diabetes">Diabetes Prediction</a></li>
+        </ul>
+        <style>
+            body {
+                background-image: url('/static/kidney.jpg'); /* Replace with a random heart image URL */
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                height: 100vh;
+            }
+        </style>
+    </div>
+    <div class="content">
+        <h1>Chronic Kidney Disease Prediction</h1>
+        <form id="kidney-disease-form">
+            <div class="form-container">
+                <div class="form-left">
+                    <label>Age:</label>
+                    <input type="number" name="age" required>
+    
+                    <label>Blood Pressure:</label>
+                    <input type="number" name="bloodPressure" required>
+    
+                    <label>Specific Gravity:</label>
+                    <input type="number" step="0.01" name="specificGravity" required>
+    
+                    <label>Albumin:</label>
+                    <input type="number" step="0.1" name="albumin" required>
+    
+                    <label>Sugar:</label>
+                    <input type="number" name="sugar" required>
+    
+                    <label>Red Blood Cells:</label>
+                    <select name="redBloodCells">
+                        <option value="1">Normal</option>
+                        <option value="0">Abnormal</option>
+                    </select>
+                    <label>Pus Cell:</label>
+                    <select name="pusCell">
+                        <option value="1">Normal</option>
+                        <option value="0">Abnormal</option>
+                    </select>
+                    <label>Pus Cell Clumps:</label>
+                    <select name="pusCellClumps">
+                        <option value="1">Present</option>
+                        <option value="0">Not Present</option>
+                    </select>
+    
+                    
+                </div>
+                <div class="form-middle">
+                    
+    
+                    
+    
+                    <label>Bacteria:</label>
+                    <select name="bacteria">
+                        <option value="1">Present</option>
+                        <option value="0">Not Present</option>
+                    </select>
+    
+                    <label>Blood Glucose Random:</label>
+                    <input type="number" name="bloodGlucoseRandom" required>
+                    <label>Blood Urea:</label>
+                    <input type="number" name="bloodUrea" required>
+    
+                    <label>Serum Creatinine:</label>
+                    <input type="number" name="serumCreatinine" required>
+    
+                    <label>Sodium:</label>
+                    <input type="number" name="sodium" required>
+    
+                    <label>Potassium:</label>
+                    <input type="number" name="potassium" required>
+                    <label>Hemoglobin:</label>
+                    <input type="number" step="0.1" name="hemoglobin" required>
+                    <label>Packed Cell Volume:</label>
+                    <input type="number" name="packedCellVolume" required>
+                </div>
+    
+                <div class="form-right">
+                    
+    
+                    
+    
+                   
+    
+                    <label>White Blood Cell Count:</label>
+                    <input type="number" name="whiteBloodCellCount" required>
+    
+                    <label>Red Blood Cell Count:</label>
+                    <input type="number" step="0.1" name="redBloodCellCount" required>
+    
+                    <label>Hypertension:</label>
+                    <select name="hypertension">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+    
+                    <label>Diabetes Mellitus:</label>
+                    <select name="diabetesMellitus">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    <label>Coronary Artery Disease:</label>
+            <select name="coronaryArteryDisease">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        
+            <label>Appetite:</label>
+            <select name="appetite">
+                <option value="1">Good</option>
+                <option value="0">Poor</option>
+            </select>
+        
+            <label>Pedal Edema:</label>
+            <select name="pedalEdema">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        
+            <label>Anemia:</label>
+            <select name="anemia">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+                </div>
+            </div>
+    
+            <button type="button" onclick="predictKidneyDisease()">Predict</button>
+        </form>
+    
+        <div id="result-kidney"></div>
+    </div>
+    
+    <script>
+        const sidebar = document.querySelector('.sidebar');
+        const toggleButton = document.querySelector('.sidebar-toggle');
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+        document.body.appendChild(overlay);
+    
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('visible');
+            overlay.classList.toggle('visible');
+        });
+    
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('visible');
+            overlay.classList.remove('visible');
+        });
+    </script>  
+      <!-- Bot Embedding -->
+<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/11/25/19/20241125191921-2WWISJ9D.js"></script>
+    
+</body>
+</html>

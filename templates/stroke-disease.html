@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Prediction</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <script src="static/js/scripts.js" defer></script>
+</head>
+<body>
+    <button class="sidebar-toggle">☰ Menu</button>
+    <div class="sidebar">
+        <h2>Multiple Disease Prediction</h2>
+        <ul>
+            <li><a href="/heart">Heart Disease Prediction</a></li>
+            <li><a href="/liver">Liver Disease Prediction</a></li>
+            <li><a href="/kidney">Kidney Disease Prediction</a></li>
+            <!-- <li><a href="/stroke">Stroke Prediction</a></li> -->
+            <li><a href="/diabetes">Diabetes Prediction</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Stroke Prediction</h1>
+        <form id="stroke-form">
+            <label>Age:</label>
+            <input type="number" name="age" required>
+            <label>Hypertension:</label>
+            <input type="number" name="hypertension" required>
+            <!-- Add other fields as necessary -->
+            <button type="button" onclick="predictStroke()">Predict</button>
+        </form>
+        <div id="result-stroke"></div>
+    </div>
+    <script>
+        const sidebar = document.querySelector('.sidebar');
+        const toggleButton = document.querySelector('.sidebar-toggle');
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+        document.body.appendChild(overlay);
+    
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('visible');
+            overlay.classList.toggle('visible');
+        });
+    
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('visible');
+            overlay.classList.remove('visible');
+        });
+    </script>  
+      <!-- Bot Embedding -->
+<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/11/25/19/20241125191921-2WWISJ9D.js"></script>
+    
+</body>
+</html>

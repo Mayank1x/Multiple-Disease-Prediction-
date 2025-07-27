@@ -1,0 +1,9 @@
+project/
+├── app.py                  # Flask application
+├── templates/
+│   └── heart-disease.html  # Your HTML file
+├── static/
+│   ├── css/                # CSS files
+│   ├── js/                 # JavaScript files
+│   └── images/             # Images
+├── best_heart_disease_model.pkl  # Trained model
